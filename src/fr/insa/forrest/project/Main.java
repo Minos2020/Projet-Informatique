@@ -25,5 +25,6 @@ public class Main {
         System.out.println("yo");
         System.out.println("Je suis toto");
         System.out.println("je suis cool");
+        System.out.println("salut les grosses tchoins");
     }
 }
