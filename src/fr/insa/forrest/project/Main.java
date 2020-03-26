@@ -24,5 +24,6 @@ public class Main {
         System.out.println(atelier1.toString());
         System.out.println("yo");
         System.out.println("Je suis toto");
+        System.out.println("je suis cool");
     }
 }
