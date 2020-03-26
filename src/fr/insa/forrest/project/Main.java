@@ -23,5 +23,6 @@ public class Main {
         atelier1.afficheInstance();
         System.out.println(atelier1.toString());
         System.out.println("yo");
+        System.out.println("Je suis toto");
     }
 }
