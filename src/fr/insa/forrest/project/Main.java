@@ -22,9 +22,5 @@ public class Main {
         Atelier atelier1 = new Atelier(30,20, ensemblePostes);
         atelier1.afficheInstance();
         System.out.println(atelier1.toString());
-        System.out.println("yo");
-        System.out.println("Je suis toto");
-        System.out.println("je suis cool");
-        System.out.println("dasdasssgd");
     }
 }
