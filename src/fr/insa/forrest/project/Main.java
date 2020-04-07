@@ -9,8 +9,6 @@ public class Main {
 
     public static void main(String[] args) {
 	//  write your code here
-        int bla;
-        bla=Lire.i();
         Atelier atelier = new Atelier();
         List<Machine> ensembleMachines = new ArrayList<>(3);
         atelier.addPoste(1234, "Découpage",ensembleMachines);
