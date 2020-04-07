@@ -1,11 +1,11 @@
 package fr.insa.forrest.project;
 
 public class Machine {
-    int refMachine;
+    int refMachine, abs, ord;
     String dMachine;
-    double abs, ord, coutHoraire, t;
+    double coutHoraire, t;
 
-    public Machine(int refMachine, String dMachine, double abs, double ord, double coutHoraire, double t) {
+    public Machine(int refMachine, String dMachine, int abs, int ord, double coutHoraire, double t) {
         this.refMachine = refMachine;
         this.dMachine = dMachine;
         this.abs = abs;

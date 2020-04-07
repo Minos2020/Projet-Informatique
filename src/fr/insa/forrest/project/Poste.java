@@ -15,13 +15,16 @@ public class Poste {
         this.ensembleMachines = ensembleMachines;
     }
 
-    public void addMachine() {
-        System.out.println("Quelle est la référence de votre machine ?");
-        Scanner sc = new Scanner (System.in);
-        int refMachine = sc.nextInt();
-        System.out.println("Quelle est la désignation de votre machine ?");
-        String dMachine = sc.next();
-        ensembleMachines.add(new Machine(refMachine,dMachine, 2, 2, 10, 120));
+    public void addMachine(int refMachine, String dMachine, int abs, int ord, double coutHoraire, double t) {
+        ensembleMachines.add(new Machine(refMachine,dMachine,abs,ord,coutHoraire,t));
     }
 
+    @Override
+    public String toString() {
+        return "Poste{" +
+                "refPoste=" + refPoste +
+                ", dPoste='" + dPoste + '\'' +
+                ", ensembleMachines=" + ensembleMachines +
+                '}';
+    }
 }

@@ -9,18 +9,13 @@ public class Main {
 
     public static void main(String[] args) {
 	//  write your code here
-        int refPoste;
-        String dPoste;
-        System.out.println("Quelle est la référence de votre poste ?");
-        refPoste = sc.nextInt();
-        System.out.println("Quelle est la désignation de votre poste ?");
-        dPoste = sc.next();
-        List<Machine> ensembleMachines = new ArrayList<>(5);
-        Poste poste1 = new Poste(refPoste, dPoste,ensembleMachines);
-        poste1.addMachine();
-        List<Poste> ensemblePostes = new ArrayList<>(5);
-        Atelier atelier1 = new Atelier(30,20, ensemblePostes);
-        atelier1.afficheInstance();
-        System.out.println(atelier1.toString());
+        int bla;
+        bla=Lire.i();
+        Atelier atelier = new Atelier();
+        List<Machine> ensembleMachines = new ArrayList<>(3);
+        atelier.addPoste(1234, "Découpage",ensembleMachines);
+        atelier.addPoste(5678, "Assemblage",ensembleMachines);
+        atelier.addPoste(4321, "Collage",ensembleMachines);
+        atelier.afficheInstance();
     }
 }

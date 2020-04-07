@@ -2,31 +2,27 @@ package fr.insa.forrest.project;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Atelier {
-    int abs, ord;
+    private int abs, ord;
     String nomAtelier = "Atelier";
     List<Poste> ensemblePostes = new ArrayList<>(5);
 
-    public Atelier(int abs, int ord, List<Poste> ensemblePostes) {
-        this.abs = abs;
-        this.ord = ord;
-        this.ensemblePostes = ensemblePostes;
+    public Atelier() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quelle est la largeur de votre atelier ?");
+        this.abs = sc.nextInt();
+        System.out.println("Quelle est la hauteur de votre atelier ?");
+        this.ord = sc.nextInt();
     }
     public void afficheInstance(){
-        System.out.println(this.nomAtelier+" a pour coordonnées : "+this.abs+";"+this.ord);
+        System.out.println("Votre atelier '"+this.nomAtelier+"' mesure "+this.abs+" mètres de large et "+this.ord+" mètres de long.");
         for (Poste elem : this.ensemblePostes){
-            System.out.println(elem);
+            System.out.println(elem.toString());
         }
     }
-
-    @Override
-    public String toString() {
-        return "Atelier{" +
-                "abs=" + abs +
-                ", ord=" + ord +
-                ", nomAtelier='" + nomAtelier + '\'' +
-                ", ensemblePostes=" + ensemblePostes +
-                '}';
+    public void addPoste(int refPoste, String dPoste, List<Machine> ensembleMachines){
+        ensemblePostes.add(new Poste(refPoste, dPoste, ensembleMachines));
     }
 }
