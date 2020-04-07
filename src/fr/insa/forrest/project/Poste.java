@@ -1,13 +1,11 @@
 package fr.insa.forrest.project;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Poste {
-    int refPoste;
-    String dPoste;
-    List<Machine> ensembleMachines = new ArrayList<>(5);
+    private int refPoste;
+    private String dPoste;
+    private List<Machine> ensembleMachines;
 
     public Poste(int refPoste, String dPoste, List<Machine> ensembleMachines) {
         this.refPoste = refPoste;

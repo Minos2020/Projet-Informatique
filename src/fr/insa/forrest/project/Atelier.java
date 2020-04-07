@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Atelier {
     private int abs, ord;
-    String nomAtelier = "Atelier";
-    List<Poste> ensemblePostes = new ArrayList<>(5);
+    private String nomAtelier = "Atelier";
+    private List<Poste> ensemblePostes = new ArrayList<>(5);
 
     public Atelier() {
         Scanner sc = new Scanner(System.in);
