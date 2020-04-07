@@ -7,7 +7,9 @@ version améliorée par Raphaël Schruoffeneger ; MIQ2 INSA Strasbourg 2013
 */
 
 public class Lire
-{    
+{
+    public static String Liste;
+
     //-------------------------------------------------------
     public static String S() // lire une chaine de caracteres
     {
