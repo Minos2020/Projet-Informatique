@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Atelier {
     private int abs, ord;
     private String nomAtelier = "Atelier";
-    private List<Poste> ensemblePostes = new ArrayList<>(5);
+    private List<Poste> ensemblePostes;
+    private List<Gamme> ensembleGammes;
 
     public Atelier() {
         Scanner sc = new Scanner(System.in);
@@ -15,14 +16,26 @@ public class Atelier {
         this.abs = sc.nextInt();
         System.out.println("Quelle est la hauteur de votre atelier ?");
         this.ord = sc.nextInt();
+        this.ensemblePostes = new ArrayList<>(5);
+        this.ensembleGammes = new ArrayList<>(5);
     }
-    public void afficheInstance(){
-        System.out.println("Votre atelier '"+this.nomAtelier+"' mesure "+this.abs+" mètres de large et "+this.ord+" mètres de long.");
+    public String afficheInstance(){
+        String str = "Nom Atelier : "+this.nomAtelier+"\n"
+                        +"Largeur : "+this.abs+"\n"
+                            +"Longueur : "+this.ord+"\nPostes :\n";
         for (Poste elem : this.ensemblePostes){
-            System.out.println(elem.toString());
+            str = str.concat("\t"+elem.affichePoste())+"\n";
         }
+        str = str+"\nGammes :\n";
+        for (Gamme elem : this.ensembleGammes){
+            str = str.concat("\t"+elem.afficheGamme())+"\n";
+        }
+        return str;
     }
     public void addPoste(int refPoste, String dPoste, List<Machine> ensembleMachines){
-        ensemblePostes.add(new Poste(refPoste, dPoste, ensembleMachines));
+        this.ensemblePostes.add(new Poste(refPoste, dPoste, ensembleMachines));
+    }
+    public void addGamme (String refGamme, List<Produit> ensembleProduits){
+        this.ensembleGammes.add(new Gamme(refGamme, ensembleProduits));
     }
 }

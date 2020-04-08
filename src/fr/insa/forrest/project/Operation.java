@@ -12,4 +12,12 @@ public class Operation {
         this.machine = machine;
         this.t = t;
     }
+
+    public Machine getMachine() {
+        return machine;
+    }
+
+    public double getT() {
+        return t;
+    }
 }

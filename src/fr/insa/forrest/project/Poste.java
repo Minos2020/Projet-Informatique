@@ -17,6 +17,14 @@ public class Poste {
         ensembleMachines.add(new Machine(refMachine,dMachine,abs,ord,coutHoraire,t));
     }
 
+    public String affichePoste(){
+        String str = dPoste+" ["+refPoste+"]\n";
+        for (Machine elem : ensembleMachines){
+            str = str.concat("\t\t"+elem.afficheMachine()+"\n");
+        }
+        return str;
+    }
+
     @Override
     public String toString() {
         return "Poste{" +
