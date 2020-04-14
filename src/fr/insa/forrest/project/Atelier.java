@@ -19,19 +19,7 @@ public class Atelier {
         this.ensemblePostes = new ArrayList<>(5);
         this.ensembleGammes = new ArrayList<>(5);
     }
-    public String afficheInstance(){
-        String str = "Nom Atelier : "+this.nomAtelier+"\n"
-                        +"Largeur : "+this.abs+"\n"
-                            +"Longueur : "+this.ord+"\nPostes :\n";
-        for (Poste elem : this.ensemblePostes){
-            str = str.concat("\t"+elem.affichePoste())+"\n";
-        }
-        str = str+"\nGammes :\n";
-        for (Gamme elem : this.ensembleGammes){
-            str = str.concat("\t"+elem.afficheGamme())+"\n";
-        }
-        return str;
-    }
+
     public void addPoste(int refPoste, String dPoste, List<Machine> ensembleMachines){
         this.ensemblePostes.add(new Poste(refPoste, dPoste, ensembleMachines));
     }

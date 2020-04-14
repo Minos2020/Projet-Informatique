@@ -16,21 +16,4 @@ public class Poste {
     public void addMachine(int refMachine, String dMachine, int abs, int ord, double coutHoraire, double t) {
         ensembleMachines.add(new Machine(refMachine,dMachine,abs,ord,coutHoraire,t));
     }
-
-    public String affichePoste(){
-        String str = dPoste+" ["+refPoste+"]\n";
-        for (Machine elem : ensembleMachines){
-            str = str.concat("\t\t"+elem.afficheMachine()+"\n");
-        }
-        return str;
-    }
-
-    @Override
-    public String toString() {
-        return "Poste{" +
-                "refPoste=" + refPoste +
-                ", dPoste='" + dPoste + '\'' +
-                ", ensembleMachines=" + ensembleMachines +
-                '}';
-    }
 }

@@ -11,29 +11,11 @@ public class Gamme {
         this.ensembleProduits = ensembleProduits;
     }
 
-    public String afficheGamme(){
-        String str = dGamme+"\n";
-        for (Produit elem : ensembleProduits){
-            str = str.concat("\t\t"+elem.afficheProduit()+"\n");
-        }
-        return str;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Gamme{" +
-                "dGamme='" + dGamme + '\'' +
-                ", ensembleProduits=" + ensembleProduits +
-                '}';
-    }
-
     public void addProduit (int codeProduit, String dProduit){
         this.ensembleProduits.add(new Produit(codeProduit, dProduit));
     }
 
-    public void suppProduit (Produit produit){
-        ensembleProduits.remove(produit);
+    public void suppProduit (Produit produit){ ensembleProduits.remove(produit);
     }
 
 

@@ -13,11 +13,6 @@ public class Machine {
         this.coutHoraire = coutHoraire;
     }
 
-    public String afficheMachine(){
-        return dMachine+" ["+refMachine+"] ("+abs+";"+ord+")\n"
-                        +"\t\tCoût horaire : "+coutHoraire;
-    }
-
     public double getCoutHoraire() {
         return coutHoraire;
     }

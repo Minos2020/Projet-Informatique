@@ -4,18 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Produit {
-    private int codeProduit;
-    private String dProduit;
+    private int refProduit;
     private List<Operation> listeOperation;
+    private List<BesoinBrut> besoins;
 
     public Produit(int codeProduit, String dProduit) {
-        this.codeProduit = codeProduit;
-        this.dProduit = dProduit;
+        this.refProduit = codeProduit;
         this.listeOperation = new ArrayList<>();
-    }
-
-    public String afficheProduit(){
-        return dProduit+" ["+codeProduit+"]";
     }
 
     public double coutProduit(){
@@ -30,7 +25,4 @@ public class Produit {
         this.listeOperation = listeOperation;
     }
 
-    public String getdProduit() {
-        return dProduit;
-    }
 }
