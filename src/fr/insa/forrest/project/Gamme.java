@@ -1,22 +1,29 @@
 package fr.insa.forrest.project;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Gamme {
-    String dGamme;
-    List<Produit> ensembleProduits;
+    private String dGamme;
+    private List<Operation> listeOperation;
 
-    public Gamme(String refGamme, List<Produit> ensembleProduits) {
-        this.dGamme = refGamme;
-        this.ensembleProduits = ensembleProduits;
+    public Gamme(String dGamme) {
+        this.dGamme = dGamme;
+        this.listeOperation = new ArrayList<>(5);
     }
 
-    public void addProduit (int codeProduit, String dProduit){
-        this.ensembleProduits.add(new Produit(codeProduit, dProduit));
+    public double coutGamme (){
+        double coutGamme = 0;
+        for (Operation elem : listeOperation){
+            coutGamme += elem.getMachine().getCoutHoraire()*(elem.getT()/3600);
+        }
+        return coutGamme;
     }
-
-    public void suppProduit (Produit produit){ ensembleProduits.remove(produit);
+    public double dureeGamme (){
+        double dureeGamme = 0;
+        for (Operation elem : listeOperation){
+            dureeGamme += elem.getT();
+        }
+        return dureeGamme;
     }
-
-
 }
